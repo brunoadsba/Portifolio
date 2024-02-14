@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background-image: url("img/tech5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+#person {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.download-button {
+    background-color: rgba(128, 128, 128, 0.5);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    right: 25px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 80%;
+    white-space: normal;
+    top: 40px;
+    background:  linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+}
+
+.download-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.download-button::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: #272727;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+
+.download-button:hover {
+    opacity: 0.7;
+}
+
+.download-button::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    border-radius: 9px;
+    transition: 0.5s;
+    opacity: 0;
+    filter: blur(20px);
+}
+
+.download-button:hover::after {
+    opacity: 1;
+}
+
+.wrapper-profile-photo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    z-index: 999;
+    background: radial-gradient(rgba(161, 158, 158, 0.15) 90%, transparent 0), radial-gradient(#000 50%, transparent 0), linear-gradient(to top left, #ffa500 0%, #ff1493 100%);
+    border-radius: 100%;
+    padding: 15px;
+}
+
+.wrapper-profile-photo img {
+    border-radius: 70%;
+    width: 150px;
+    height: 150px;
+    transition: transform 0.7s ease;
+}
+
+.profile-name {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: white;
+    padding: 4px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.links {
+    position: fixed;
+    bottom: 10px;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
+    gap: 0px;
+}
+
+.links a {
+    display: inline-block; 
+    margin: 0 0px; 
+    text-decoration: none; 
+}
+
+
+.links a img {
+    width: 100px;
+    height: 50px;
+    filter: brightness(1);
+    transition: filter 0.2s ease, transform 0.3s ease;
+}
+
+.links a img:hover {
+    filter: brightness(1.5);
+    transform: scale(1.2);
+}
+
+.links a:nth-child(1) img,
+.links a:nth-child(2) img {
+    width: 150px;
+    height: 80px;
+}
+
+.link-name {
+    font-size: 0.9rem;
+    color: #fff;
+    padding-top: 5px;
+    white-space: nowrap;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.links a:hover .link-name {
+    opacity: 1;
+}
+
+.stacks {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stacks ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stacks ul li {
+    padding: 5px;
+    position: relative;
+}
+
+.stacks ul li img {
+    width: 150px;
+    height: 100px;
+    margin: 10%;
+    border-style: groove;
+    border-width: 10px;
+    border-radius: 60px;
+    border-color: #ffa500 transparent;
+    border-right: #ff1493;
+    border-left: #fff;
+    transition: transform 0.9s ease;
+}
+
+.stacks ul li img:hover {
+    transform: scale(1.2);
+}
+
+.stacks ul li div:hover::after {
+    content: attr(data);
+    position: absolute;
+    bottom: 25px;
+    nav-left: 100%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 10px;
+    line-height: 1.4;
+    text-align: left;
+    max-width: 80%;
+    white-space: normal;
+    z-index: 1;
+}
