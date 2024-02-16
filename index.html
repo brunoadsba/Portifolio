@@ -1,270 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    min-height: 100vh;
-    font-family: "Poppins", sans-serif;
-    color: #fff;
-    background-image: url("img/tech5.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
-
-#person {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-}
-
-.download-button {
-    background-color: rgba(128, 128, 128, 0.5);
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: fixed;
-    right: 25px;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    text-align: center;
-    max-width: 80%;
-    white-space: normal;
-    top: 40px;
-    background:  linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
-}
-
-.download-button span {
-    position: relative;
-    z-index: 1;
-}
-
-.download-button::before {
-    content: "";
-    position: absolute;
-    inset: 1px;
-    background: #272727;
-    border-radius: 9px;
-    transition: 0.5s;
-}
-
-.download-button:hover {
-    opacity: 0.7;
-}
-
-.download-button::after {
-    content: "";
-    position: absolute;
-    inset: 0px;
-    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
-    border-radius: 9px;
-    transition: 0.5s;
-    opacity: 0;
-    filter: blur(20px);
-}
-
-.download-button:hover::after {
-    opacity: 1;
-}
-
-.wrapper-profile-photo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 20px;
-    z-index: 999;
-    background: radial-gradient(rgba(161, 158, 158, 0.15) 90%, transparent 0), radial-gradient(#000 50%, transparent 0), linear-gradient(to top left, #ffa500 0%, #ff1493 100%);
-    border-radius: 100%;
-    padding: 15px;
-}
-
-.wrapper-profile-photo img {
-    border-radius: 70%;
-    width: 150px;
-    height: 150px;
-    transition: transform 0.7s ease;
-}
-
-.profile-name {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-    background-color: #000;
-    color: white;
-    padding: 4px 15px;
-    border-radius: 10px;
-    font-size: 14px;
-    z-index: 1;
-}
-
-.links {
-    position: fixed;
-    bottom: 10px;
-    left: 0%;
-    right: 0%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    max-width: 500px;
-    gap: 0px;
-}
-
-.links a {
-    display: inline-block; 
-    margin: 0 0px; 
-    text-decoration: none; 
-}
-
-.link-item {
-    /* Estilos comuns para todos os itens */
-    display: inline-block;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.link-item:nth-child(1) {
-    /* Estilos para o primeiro item */
-    margin-left: 0; /* Por exemplo, alinhamento específico */
-}
-
-.link-item:nth-child(2) {
-    /* Estilos para o segundo item */
-}
-
-/* Adicione estilos para os outros itens conforme necessário */
-
-/* Estilos para telas menores, como smartphones */
-@media only screen and (max-width: 600px) {
-    .link-item {
-        /* Estilos para todos os itens em telas menores */
-        display: inline-block; /* Altere a exibição para inline-block para que os itens permaneçam na mesma linha */
-        margin: 10px; /* Adicione margem entre os itens para evitar a sobreposição */
-        width: calc(50% - 20px); /* Defina a largura de cada item para ocupar metade da largura da tela, menos a margem */
-        text-align: center; /* Centralize o conteúdo dos itens */
-        padding: 10px; /* Adicione algum espaço interno para melhorar a aparência */
-        border-radius: 10px; /* Adicione bordas arredondadas */
-        background-color: rgba(255, 255, 255, 0.2); /* Adicione um fundo semi-transparente para destacar os itens */
-    }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Portfólio - Bruno Almeida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     
-    .links {
-        flex-wrap: wrap; /* Permita que os itens quebrem para a próxima linha */
-        justify-content: center; /* Centralize os itens horizontalmente */
-    }
-}
+    <section id="person">
 
+        <div class="download-section">
+            <a href="./img/Currículo - BRUNO ALMEIDA - 2024.pdf" target="_blank">
+                <button class="download-button"><span>Download CV</span></button>
+            </a>
+        </div>
 
+        <div class="stacks">
+            <ul>
+                <li>
+                    <div data="Formação: Técnico em Segurança do Trabalho">
+                        <img src="./img/capacete.jpg" alt="prevenção-icon">
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div data="Graduando: Análise e Desenvolvimento de Sistemas">
+                        <img src="./img/codigo.jpg" alt="informação-icon">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="wrapper-profile-photo">
+            <a>
+                <img class="profile-photo" src="./img/3x4.jpeg" alt="icon-foto-bruno">
+                <div class="profile-name">Bruno Almeida</div>
+            </a>
+        </div>      
+    
+        <div class="links">
+            <div class="links">
+                <a href="https://wa.me/5571987075563" target="_blank" class="link-item">
+                    <img src="./img/wp.png" alt="icon-whatsapp">
+                    <span class="link-name">WhatsApp</span>
+                </a>
+            
+                <a href="https://www.linkedin.com/in/brunotstba/" target="_blank" class="link-item">
+                    <img src="./img/in.png" alt="icon-linkedin">
+                    <span class="link-name">LinkedIn</span>
+                </a>
+            
+                <a href="https://youtu.be/P9zkWOSBeK0" target="_blank" class="link-item">
+                    <img src="./img/ytBRA.png" alt="icon-yt">
+                    <span class="link-name">Português</span>
+                </a>
+            
+                <a href="https://youtu.be/ShnIkqRbmhw" target="_blank" class="link-item">
+                    <img src="./img/ytUSA.png" alt="icon-yt">
+                    <span class="link-name">Inglês</span>
+                </a>
+            </div>
+            
+        
+    </section>
 
-.links a img {
-    width: 100px;
-    height: 50px;
-    filter: brightness(1);
-    transition: filter 0.2s ease, transform 0.3s ease;
-}
-
-.links a img:hover {
-    filter: brightness(1.5);
-    transform: scale(1.2);
-}
-
-.links a:nth-child(1) img,
-.links a:nth-child(2) img {
-    width: 150px;
-    height: 80px;
-}
-
-.link-name {
-    font-size: 0.9rem;
-    color: #fff;
-    padding-top: 5px;
-    white-space: nowrap;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.links a:hover .link-name {
-    opacity: 1;
-}
-
-.stacks {
-    position: fixed;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.stacks ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.stacks ul li {
-    padding: 5px;
-    position: relative;
-}
-
-.stacks ul li img {
-    width: 150px;
-    height: 100px;
-    margin: 10%;
-    border-style: groove;
-    border-width: 10px;
-    border-radius: 60px;
-    border-color: #ffa500 transparent;
-    border-right: #ff1493;
-    border-left: #fff;
-    transition: transform 0.9s ease;
-}
-
-.stacks ul li img:hover {
-    transform: scale(1.2);
-}
-
-.stacks ul li div:hover::after {
-    content: attr(data);
-    position: absolute;
-    bottom: 25px;
-    nav-left: 100%;
-    transform: translateX(-50%);
-    font-size: 0.9rem;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 20px;
-    padding: 10px;
-    line-height: 1.4;
-    text-align: left;
-    max-width: 80%;
-    white-space: normal;
-    z-index: 1;
-}
+</body>
+</html>
