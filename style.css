@@ -126,92 +126,46 @@ body::before {
 .links {
     position: fixed;
     bottom: 10px;
-    left: 0%;
-    right: 0%;
-    margin: auto;
+    left: 0;
+    right: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 90%;
-    max-width: 500px;
-    gap: 0px;
-}
-
-.links a {
-    display: inline-block; 
-    margin: 0 0px; 
-    text-decoration: none; 
-}
-
-.link-item {
-    /* Estilos comuns para todos os itens */
-    display: inline-block;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.link-item:nth-child(1) {
-    /* Estilos para o primeiro item */
-    margin-left: 0; /* Por exemplo, alinhamento específico */
-}
-
-.link-item:nth-child(2) {
-    /* Estilos para o segundo item */
-}
-
-/* Adicione estilos para os outros itens conforme necessário */
-
-/* Estilos para telas menores, como smartphones */
-@media only screen and (max-width: 600px) {
-    .link-item {
-        /* Estilos para todos os itens em telas menores */
-        display: inline-block; /* Altere a exibição para inline-block para que os itens permaneçam na mesma linha */
-        margin: 10px; /* Adicione margem entre os itens para evitar a sobreposição */
-        width: calc(50% - 20px); /* Defina a largura de cada item para ocupar metade da largura da tela, menos a margem */
-        text-align: center; /* Centralize o conteúdo dos itens */
-        padding: 10px; /* Adicione algum espaço interno para melhorar a aparência */
-        border-radius: 10px; /* Adicione bordas arredondadas */
-        background-color: rgba(255, 255, 255, 0.2); /* Adicione um fundo semi-transparente para destacar os itens */
-    }
-    
-    .links {
-        flex-wrap: wrap; /* Permita que os itens quebrem para a próxima linha */
-        justify-content: center; /* Centralize os itens horizontalmente */
-    }
+    gap: 0px; /* Espaçamento entre os links */
 }
 
 
-
-.links a img {
-    width: 100px;
-    height: 50px;
-    filter: brightness(1);
-    transition: filter 0.2s ease, transform 0.3s ease;
-}
-
-.links a img:hover {
-    filter: brightness(1.5);
-    transform: scale(1.2);
-}
 
 .links a:nth-child(1) img,
 .links a:nth-child(2) img {
-    width: 150px;
-    height: 80px;
+    width: 80px; /* Aumenta o tamanho dos dois primeiros ícones */
+}
+
+.links a {
+    display: inline-block; /* Alinhar os itens dentro dos links horizontalmente */
+    align-items: center; /* Alinhar os itens verticalmente */
+    text-decoration: none;
+    padding: 10px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.links a img {
+    width: 50px; /* Tamanho dos ícones */
+    height: auto;
+    margin-right: 1px; /* Espaçamento entre o ícone e o texto */
 }
 
 .link-name {
-    font-size: 0.9rem;
+    font-size: 15px; /* Tamanho do texto */
     color: #fff;
-    padding-top: 5px;
-    white-space: nowrap;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    visibility: hidden;
+    position:relative;
 }
+
 
 .links a:hover .link-name {
     opacity: 1;
+    visibility: visible;
 }
 
 .stacks {
@@ -267,4 +221,37 @@ body::before {
     max-width: 80%;
     white-space: normal;
     z-index: 1;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Alinha os itens ao centro */
+    }
+
+    .links a {
+        display: inline-block;
+        margin: 5px; /* Adicione margem entre os itens para evitar a sobreposição */
+        width: calc(40% - 20px); /* Defina a largura de cada item para ocupar metade da largura da tela, menos a margem */
+        text-align: center;
+    }
+
+    .links a img {
+        width: 50px; /* Reduza o tamanho dos ícones */
+        height: auto; /* Mantenha a proporção original */
+        transition: transform 0.3s ease;
+    }
+
+
+    .links a img:hover {
+        transform: scale(1.2);
+    }
+    .link-name {
+        display:flex;
+    }
+    
+
 }
