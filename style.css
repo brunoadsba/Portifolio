@@ -137,29 +137,31 @@ body::before {
 
 .links a:nth-child(1) img,
 .links a:nth-child(2) img {
-    width: 80px; /* Aumenta o tamanho dos dois primeiros ícones */
+    width: 70px; /* Aumenta o tamanho dos dois primeiros ícones */
 }
 
 .links a {
     display: inline-block; /* Alinhar os itens dentro dos links horizontalmente */
     align-items: center; /* Alinhar os itens verticalmente */
     text-decoration: none;
-    padding: 10px; /* Espaçamento interno */
+    padding: 5px; /* Espaçamento interno */
     background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo */
     border-radius: 10px; /* Bordas arredondadas */
 }
 
 .links a img {
-    width: 50px; /* Tamanho dos ícones */
+    width: 30px; /* Tamanho dos ícones */
     height: auto;
     margin-right: 1px; /* Espaçamento entre o ícone e o texto */
 }
 
 .link-name {
-    font-size: 15px; /* Tamanho do texto */
+    font-size: 12px; /* Tamanho do texto */
     color: #fff;
+    position: center;
     visibility: hidden;
-    position:relative;
+    text-align: center;
+    justify-content: center;
 }
 
 
@@ -235,12 +237,12 @@ body::before {
     .links a {
         display: inline-block;
         margin: 5px; /* Adicione margem entre os itens para evitar a sobreposição */
-        width: calc(40% - 20px); /* Defina a largura de cada item para ocupar metade da largura da tela, menos a margem */
+        width: calc(20% - 10px); /* Defina a largura de cada item para ocupar metade da largura da tela, menos a margem */
         text-align: center;
     }
 
     .links a img {
-        width: 50px; /* Reduza o tamanho dos ícones */
+        width: 35px; /* Reduza o tamanho dos ícones */
         height: auto; /* Mantenha a proporção original */
         transition: transform 0.3s ease;
     }
